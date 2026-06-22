@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The New Era of Work - 9.9x21cm Infographic (Single Page)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        navy: '#0A1128',
+                        panel: '#111C3A',
+                        electric: '#00E5FF',
+                        neon: '#B026FF',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --page-width: 9.9cm;
+            --page-height: 21cm;
+        }
+        
+        body {
+            background-color: #1a202c; 
+            margin: 0;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .infographic-page {
+            width: var(--page-width);
+            height: var(--page-height);
+            background-color: #0A1128;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            padding: 0.4cm;
+            box-sizing: border-box;
+        }
+
+        .infographic-page::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 10px 10px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #00E5FF, #B026FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-box {
+            background: rgba(17, 28, 58, 0.9);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+        
+        .section-num {
+            background: #00E5FF;
+            color: #0A1128;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .section-header {
+            font-size: 7.5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: white;
+        }
+
+        /* Print formatting */
+        @media print {
+            body { background: none; padding: 0; align-items: flex-start; }
+            .infographic-page { box-shadow: none; margin: 0; }
+            @page { size: 9.9cm 21cm; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="infographic-page">
+        <!-- Top Gradient Bar -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-electric to-neon z-20"></div>
+        
+        <div class="relative z-10 flex flex-col h-full justify-between">
+            
+            <!-- HEADER -->
+            <div class="text-center mb-1">
+                <h1 class="text-[16px] font-extrabold tracking-tight leading-none">
+                    THE NEW <span class="gradient-text">ERA OF WORK</span>
+                </h1>
+                <p class="text-[5px] text-gray-400 mt-1 uppercase tracking-widest">The Decentralized Digital Workforce</p>
+                <p class="text-[5px] text-electric font-bold mt-0.5 uppercase tracking-wider">Wan Adrind Azril | 2025158213 | JBA2514D</p>
+            </div>
+
+            <!-- 1. INTRODUCTION -->
+            <div class="flex flex-col gap-1">
+                <div class="section-title">
+                    <div class="section-num">1</div><h2 class="section-header">Introduction</h2>
+                </div>
+                <div class="flex gap-1.5">
+                    <div class="glass-box p-1.5 flex-1 border-l-2 border-l-electric">
+                        <h3 class="text-[6.5px] font-bold text-white mb-0.5">Digital Freelancer</h3>
+                        <p class="text-[5.5px] text-gray-300 leading-tight">Independent worker leveraging the internet for short-term global projects, eliminating geographical barriers.</p>
+                    </div>
+                    <div class="glass-box p-1.5 flex-1 border-l-2 border-l-neon">
+                        <h3 class="text-[6.5px] font-bold text-white mb-0.5">Crowdsourcing</h3>
+                        <p class="text-[5.5px] text-gray-300 leading-tight">Distributing tasks to anonymous external network users via open calls on internet platforms.</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center bg-panel rounded p-1 border border-gray-700 mt-0.5">
+                    <span class="text-[5.5px] font-bold text-gray-400">THE 4 PILLARS:</span>
+                    <div class="flex gap-1">
+                        <span class="text-[5.5px] bg-navy px-1 py-0.5 rounded text-electric"><i class="fas fa-laptop text-[5px]"></i> Platform</span>
+                        <span class="text-[5.5px] bg-navy px-1 py-0.5 rounded text-neon"><i class="fas fa-users text-[5px]"></i> Workers</span>
+                        <span class="text-[5.5px] bg-navy px-1 py-0.5 rounded text-blue-400"><i class="fas fa-building text-[5px]"></i> Providers</span>
+                        <span class="text-[5.5px] bg-navy px-1 py-0.5 rounded text-purple-400"><i class="fas fa-university text-[5px]"></i> Enablers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. LEARNING EXPERIENCE -->
+            <div class="flex flex-col gap-1">
+                <div class="section-title">
+                    <div class="section-num bg-neon text-white">2</div><h2 class="section-header">Learning Experience</h2>
+                </div>
+                <div class="grid grid-cols-5 gap-1.5">
+                    <!-- Left: Stats -->
+                    <div class="col-span-2 flex flex-col gap-1">
+                        <div class="glass-box p-1.5 text-center">
+                            <h3 class="text-[5px] font-bold text-electric uppercase mb-0.5">The Boom</h3>
+                            <p class="text-[12px] font-extrabold leading-none text-white">59M</p>
+                            <p class="text-[4.5px] text-gray-400 mb-0.5">US Freelancers (36%)</p>
+                            <p class="text-[10px] font-extrabold leading-none text-neon">$1.2T</p>
+                            <p class="text-[4.5px] text-gray-400">Generated Annually</p>
+                            <p class="text-[4.5px] text-electric bg-electric/20 rounded mt-1">+53% Post-Pandemic</p>
+                        </div>
+                        <div class="glass-box p-1.5 text-center border border-neon/50">
+                            <h3 class="text-[5px] font-bold text-neon uppercase mb-0.5">Tech Savvy Myth</h3>
+                            <div class="flex justify-between text-[5px]"><span class="text-gray-300">GenZ Phones</span><span class="text-white">98%</span></div>
+                            <div class="flex justify-between text-[5px]"><span class="text-gray-300">No Tech Skills</span><span class="text-neon font-bold">58%</span></div>
+                        </div>
+                    </div>
+                    <!-- Right: Waves & Lifecycle -->
+                    <div class="col-span-3 flex flex-col gap-1">
+                        <div class="glass-box p-1.5">
+                            <h3 class="text-[6px] font-bold text-center border-b border-gray-700 pb-0.5 mb-1">3 Waves of Evolution</h3>
+                            <div class="flex justify-between text-[5px]">
+                                <div class="text-center"><div class="w-3 h-3 bg-electric text-navy rounded-full mx-auto mb-0.5 flex items-center justify-center font-bold">1</div><span class="text-gray-300">Outsourcing<br>(1989)</span></div>
+                                <div class="w-2 border-t border-gray-600 mt-1.5"></div>
+                                <div class="text-center"><div class="w-3 h-3 bg-blue-400 text-navy rounded-full mx-auto mb-0.5 flex items-center justify-center font-bold">2</div><span class="text-gray-300">Offshoring<br>(Global)</span></div>
+                                <div class="w-2 border-t border-gray-600 mt-1.5"></div>
+                                <div class="text-center"><div class="w-3 h-3 bg-neon text-white rounded-full mx-auto mb-0.5 flex items-center justify-center font-bold">3</div><span class="text-white font-bold">Open Source<br>(Present)</span></div>
+                            </div>
+                        </div>
+                        <div class="glass-box p-1 flex-1 flex flex-col justify-center">
+                            <h3 class="text-[6px] font-bold text-center mb-1">5-Step Lifecycle</h3>
+                            <div class="flex items-center justify-between px-1">
+                                <div class="text-center"><i class="fas fa-upload text-[7px] text-gray-400"></i><p class="text-[4.5px] mt-0.5">1. Submit</p></div>
+                                <i class="fas fa-angle-right text-[5px] text-gray-600"></i>
+                                <div class="text-center"><i class="fas fa-hand-pointer text-[7px] text-electric"></i><p class="text-[4.5px] mt-0.5">2. Pull</p></div>
+                                <i class="fas fa-angle-right text-[5px] text-gray-600"></i>
+                                <div class="text-center"><i class="fas fa-check text-[7px] text-neon"></i><p class="text-[4.5px] mt-0.5">3. Complete</p></div>
+                                <i class="fas fa-angle-right text-[5px] text-gray-600"></i>
+                                <div class="text-center"><i class="fas fa-search text-[7px] text-blue-400"></i><p class="text-[4.5px] mt-0.5">4. Proof</p></div>
+                                <i class="fas fa-angle-right text-[5px] text-gray-600"></i>
+                                <div class="text-center"><i class="fas fa-wallet text-[7px] text-green-400"></i><p class="text-[4.5px] mt-0.5">5. Remunerate</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. SKILLS & APPLICATION -->
+            <div class="flex flex-col gap-1">
+                <div class="section-title">
+                    <div class="section-num">3</div><h2 class="section-header">Skills & Application</h2>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-1.5">
+                    <!-- Toolkit & 4 Types -->
+                    <div class="flex flex-col gap-1">
+                        <div class="glass-box p-1.5">
+                            <h3 class="text-[5.5px] font-bold text-center border-b border-gray-700 pb-0.5 mb-1 text-electric">The Toolkit</h3>
+                            <ul class="text-[5px] space-y-0.5 text-gray-300">
+                                <li><i class="fas fa-brain w-3 text-electric"></i> <b>Mindset:</b> Service Entrepreneur</li>
+                                <li><i class="fas fa-globe w-3 text-neon"></i> <b>Time:</b> Global adaptability</li>
+                                <li><i class="fas fa-laptop w-3 text-electric"></i> <b>ICT:</b> Hardware/Maintenance</li>
+                                <li><i class="fas fa-store w-3 text-neon"></i> <b>Platforms:</b> Upwork, Fiverr, etc.</li>
+                            </ul>
+                        </div>
+                        <div class="glass-box p-1">
+                            <h3 class="text-[5.5px] font-bold text-center mb-1">4 Types of Work</h3>
+                            <div class="grid grid-cols-2 gap-0.5">
+                                <div class="bg-navy p-0.5 text-center rounded border-t border-electric"><span class="text-[4.5px] font-bold">Micro Tasks</span><br><span class="text-[4px] text-gray-500">Data Entry</span></div>
+                                <div class="bg-navy p-0.5 text-center rounded border-t border-neon"><span class="text-[4.5px] font-bold">Specialized</span><br><span class="text-[4px] text-gray-500">App Dev</span></div>
+                                <div class="bg-navy p-0.5 text-center rounded border-t border-neon"><span class="text-[4.5px] font-bold">Non-Digital</span><br><span class="text-[4px] text-gray-500">Errands</span></div>
+                                <div class="bg-navy p-0.5 text-center rounded border-t border-electric"><span class="text-[4.5px] font-bold">Passive</span><br><span class="text-[4px] text-gray-500">Stock Photos</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 8 Models -->
+                    <div class="glass-box p-1.5 flex flex-col h-full">
+                        <h3 class="text-[5.5px] font-bold text-center border-b border-gray-700 pb-0.5 mb-1 text-neon shrink-0">8 Business Models</h3>
+                        <div class="grid grid-cols-2 gap-x-1 gap-y-[3px] flex-1 items-center">
+                            <div class="flex items-start gap-1"><i class="fas fa-cogs text-[5px] text-electric w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Service Process:</b> Waze, CAPTCHA</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-file-alt text-[5px] text-electric w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Crowd Content:</b> User generated (forums)</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-coins text-[5px] text-neon w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Crowd Funding:</b> Kickstarter</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-lightbulb text-[5px] text-neon w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Open Innovation:</b> NASA Initiatives</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-palette text-[5px] text-electric w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Crowd Creation:</b> Wikipedia, Open-Source</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-star text-[5px] text-electric w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Crowd Reviews:</b> TripAdvisor, Yelp</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-check text-[5px] text-neon w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Crowd Voting:</b> TV comps, IMDb</span></div>
+                            <div class="flex items-start gap-1"><i class="fas fa-brain text-[5px] text-neon w-3 text-center mt-0.5"></i><span class="text-[4px] leading-tight"><b class="text-[4.5px]">Knowledge:</b> Quora, MOOCs</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. INSIGHT & FUTURE -->
+            <div class="flex flex-col gap-1">
+                <div class="section-title">
+                    <div class="section-num bg-neon text-white">4</div><h2 class="section-header">Insight & Future</h2>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-1.5">
+                    <!-- Wellbeing & Gen -->
+                    <div class="col-span-1 flex flex-col gap-1">
+                        <div class="glass-box p-1 text-center flex-1 flex flex-col justify-center border border-neon/30">
+                            <h3 class="text-[5.5px] font-bold mb-0.5">Wellbeing Factor</h3>
+                            <div class="flex justify-center items-end gap-1 mb-0.5"><span class="text-[10px] font-bold text-electric leading-none">75%</span><span class="text-[4px] text-gray-400 text-left leading-tight w-12">Earn same<br>or more</span></div>
+                            <div class="flex justify-center items-end gap-1"><span class="text-[10px] font-bold text-neon leading-none">86%</span><span class="text-[4px] text-gray-400 text-left leading-tight w-12">Best days<br>are ahead</span></div>
+                        </div>
+                        <div class="glass-box p-1">
+                            <div class="flex justify-between items-center mb-0.5"><span class="text-[4.5px]">Gen Z</span><span class="text-[5px] text-electric font-bold">50%</span></div>
+                            <div class="w-full bg-gray-800 h-0.5 mb-1"><div class="bg-electric h-full" style="width: 50%"></div></div>
+                            <div class="flex justify-between items-center mb-0.5"><span class="text-[4.5px]">Millennials</span><span class="text-[5px] text-neon font-bold">44%</span></div>
+                            <div class="w-full bg-gray-800 h-0.5 mb-1"><div class="bg-neon h-full" style="width: 44%"></div></div>
+                            <div class="flex justify-between text-[4px] text-gray-500"><span>GenX: 30%</span><span>Boomer: 26%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Win-Win & Growth -->
+                    <div class="col-span-2 flex flex-col gap-1">
+                        <div class="glass-box p-1.5 flex-1 flex flex-col justify-center">
+                            <h3 class="text-[5.5px] font-bold text-center border-b border-gray-700 pb-0.5 mb-1">The Win-Win System</h3>
+                            <div class="flex gap-3 items-center justify-center h-full mt-0.5">
+                                <div class="flex-1 border-l border-electric pl-1.5">
+                                    <span class="text-[5.5px] font-bold text-electric block mb-1"><i class="fas fa-building text-[5px]"></i> Providers</span>
+                                    <p class="text-[4.5px] text-gray-400 leading-tight">Cost-effective, speed, perfect talent matching.</p>
+                                </div>
+                                <div class="flex-1 border-l border-neon pl-1.5">
+                                    <span class="text-[5.5px] font-bold text-neon block mb-1"><i class="fas fa-user text-[5px]"></i> Workers</span>
+                                    <p class="text-[4.5px] text-gray-400 leading-tight">Global reach, total freedom, zero-cost growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-panel rounded p-1 border border-gray-700 text-center flex-1 flex flex-col justify-center">
+                            <h3 class="text-[5px] font-bold text-gray-300 uppercase mb-1">5 Growth Drivers</h3>
+                            <div class="flex flex-wrap justify-center gap-0.5">
+                                <span class="bg-navy px-1 py-0.5 rounded text-[4.5px] border border-gray-600">Org Goals</span>
+                                <span class="bg-navy px-1 py-0.5 rounded text-[4.5px] border border-gray-600">Worker Mindset</span>
+                                <span class="bg-navy px-1 py-0.5 rounded text-[4.5px] border border-gray-600">Tech/Capital</span>
+                                <span class="bg-navy px-1 py-0.5 rounded text-[4.5px] border border-gray-600">Trust</span>
+                                <span class="bg-navy px-1 py-0.5 rounded text-[4.5px] border border-gray-600">Macro Environ.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. SUGGESTION FOR IMPROVEMENT -->
+            <div class="flex flex-col gap-1 mb-1">
+                <div class="section-title">
+                    <div class="section-num">5</div><h2 class="section-header">Suggestion For Improvement</h2>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-gray-600 p-1.5 rounded flex items-center gap-2">
+                    <div class="flex items-center text-lg shrink-0">
+                        <i class="fas fa-mobile-alt text-gray-400"></i>
+                        <i class="fas fa-arrow-right text-[8px] text-electric mx-1"></i>
+                        <i class="fas fa-cogs text-neon"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-[6px] font-bold text-white mb-0.5">From Consumption to Creation</h3>
+                        <p class="text-[5px] text-gray-300 leading-tight">Stop assuming "Digital Natives" are tech-savvy. Training must shift from basic device usage to deep, cognitive tech problem-solving.</p>
+                    </div>
+                </div>
+
+                <div class="glass-box p-1.5">
+                    <h3 class="text-[5.5px] font-bold text-center mb-1">Beyond the Task: 3 Levels of Engagement</h3>
+                    <div class="grid grid-cols-3 gap-1">
+                        <div class="bg-navy p-1 rounded border-t border-electric text-center">
+                            <i class="fas fa-brain text-[8px] text-electric mb-0.5"></i>
+                            <h4 class="text-[5px] font-bold text-white mb-0.5">Cognitive</h4>
+                            <p class="text-[4px] text-gray-400 leading-tight">Deep mental effort & critical thinking vs clicking.</p>
+                        </div>
+                        <div class="bg-navy p-1 rounded border-t border-neon text-center">
+                            <i class="fas fa-heart text-[8px] text-neon mb-0.5"></i>
+                            <h4 class="text-[5px] font-bold text-white mb-0.5">Emotional</h4>
+                            <p class="text-[4px] text-gray-400 leading-tight">Foster passion, joy, and a sense of belonging.</p>
+                        </div>
+                        <div class="bg-navy p-1 rounded border-t border-blue-400 text-center">
+                            <i class="fas fa-dumbbell text-[8px] text-blue-400 mb-0.5"></i>
+                            <h4 class="text-[5px] font-bold text-white mb-0.5">Work</h4>
+                            <p class="text-[4px] text-gray-400 leading-tight">Structure tasks as meaningful, absorbing pursuits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
